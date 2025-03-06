@@ -58,14 +58,14 @@ while ($arrayp=mysqli_fetch_array($exeSQL))
 
     echo "<form action=basket.php method=post >";
 
-    echo "<select name='p_quantity'>";
+    echo "<select name=p_quantity>";
     for($i=1; $i<=$arrayp['prodQuantity']; $i++){
         echo "<option value=". $i .">". $i ."</option>";
     }
     echo "</select>";
-    echo "<input type=submi name='submitbtn' value='ADD TO BASKET' id='submitbtn'>";
+    echo "<input type=submit name='submitbtn' value='ADD TO BASKET' id='submitbtn'>";
     //pass the product id to the next page basket.php as a hidden value
-    echo "<input type=hidden name='h_prodid' value='.$prodid' >";
+    echo "<input type='hidden' name='h_prodid' value='".$prodid."'>";
 
     echo "</form>";
 
