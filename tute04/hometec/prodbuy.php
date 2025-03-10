@@ -65,7 +65,7 @@ while ($arrayp=mysqli_fetch_array($exeSQL))
     echo "</select>";
     echo "<input type=submit name='submitbtn' value='ADD TO BASKET' id='submitbtn'>";
     //pass the product id to the next page basket.php as a hidden value
-    echo "<input type='hidden' name='h_prodid' value='".$prodid."'>";
+    echo "<input type='hidden' name='h_prodid' value= " . $prodid . ">";
 
     echo "</form>";
 

@@ -27,16 +27,17 @@ while ($arrayp=mysqli_fetch_array($exeSQL))
     echo "<td style='border: 0px'>";
     //display the small image whose name is contained in the array
     echo "<a href=prodbuy.php?u_prod_id=".$arrayp['prodId'].">";
-    echo "<img src=images/".$arrayp['prodPicNameSmall']." height=200 width=200>";
+    echo "<img src=images/".$arrayp['prodPicNameSmall']." height=200 width=200> </a>";
     echo "</td>";
 
     echo "<td style='border: 0px'>";
     echo "<p><h5>".$arrayp['prodName']."</h5>"; //display product name as contained in the array
     echo "<p>".$arrayp['prodDescripShort'] . "</p>";
-    echo "<p><b>&pound".$arrayp['prodPrice'] . "</b></p>";
+    echo "<p><b>&pound".$arrayp['prodPrice'] . "</b></p>"; 
     echo "</td>";
-
+    
     echo "</tr>";
+    
 }
 echo "</table>";
 

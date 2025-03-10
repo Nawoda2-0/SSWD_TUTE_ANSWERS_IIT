@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header file</title>
+</head>
+
+<body>
+    
+    <div id="container">
+        <a href="index.php" style="text-decoration: none">
+            <div id="navbar">
+                <div id="header">
+                    <h1>Hometeq`</h1>
+                    <h2>Your home for home tech</h2>
+                    <h3><?php echo "London, ".date('1 d F Y h:i:s'); ?></h3>
+                </div>
+        </a>
+                <div id="navigation">
+                    <ul>
+                        <?php if (!isset($_SESSION['userid']))
+                            {
+                        ?>
+                            <div>
+                                <li><a href='index.php'>Home Tech</a></li>
+                                <li><a href='aboutus.php'>About Us</a></li>
+                                <li><a href='signup.php'>Sign Up</a></li>
+                                <li><a href='login.php'>Login</a></li>
+                            </div>
+                            <div>
+                                <li><a href='basket.php'>Smart Basket</a></li>
+                                <li><a href='login.php'>Staff Login</a></li>
+                            </div>
+                            <?php
+                            }
+                            else
+                            {
+                            ?>
+                            <div>
+                                <li><a href='index.php'>Home Tech</a></li>
+                                <li><a href='aboutus.php'>About Us</a></li>
+                                <li><a href='logout.php'>Logout</a></li>
+                            </div>
+                            <div>
+                                <li><a href='basket.php'>Smart Basket</a></li>
+                            <div>
+                            <?php
+                            }
+                            ?>
+                        
+                    </ul>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- this is only a starting tag. the content start from here and by the end its end at footer file -->
+    <div id="content"> 
+
+</body>
+
+</html>
