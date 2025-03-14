@@ -18,6 +18,7 @@ echo "<p> Thank you, ".$_SESSION['fname']." ".$_SESSION['sname']."</p>";
 unset($_SESSION);
 session_destroy();
 echo "<br><p>You are now logged out</p>";
+echo "<p>Go to <a href='template.php'>Home</a><p>";
 
 
 include ("footfile.html");
